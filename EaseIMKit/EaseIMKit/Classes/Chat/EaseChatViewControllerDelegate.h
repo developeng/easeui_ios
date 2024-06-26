@@ -153,6 +153,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)messageCellDidClickQuote:(EMChatMessage *)message;
 - (BOOL)messageCellDidLongPressQuote:(EMChatMessage *)message;
 
+//自定义
+- (void)eventClick:(NSInteger)type;
+
 @end
 
 NS_ASSUME_NONNULL_END

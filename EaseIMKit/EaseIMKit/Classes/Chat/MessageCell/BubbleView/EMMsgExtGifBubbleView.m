@@ -38,10 +38,10 @@
         NSString *localeLanguageCode = [[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode];;
         NSString *name = [(EMTextMessageBody *)model.message.body text];
         if ([localeLanguageCode isEqualToString:@"zh"] && [name containsString:@"Example"]) {
-            name = [name stringByReplacingOccurrencesOfString:@"Example" withString:@"示例"];
+            name = [name stringByReplacingOccurrencesOfString:@"Example" withString:@"动画表情"];
         }
-        if ([localeLanguageCode isEqualToString:@"en"] && [name containsString:@"示例"]) {
-            name = [name stringByReplacingOccurrencesOfString:@"示例" withString:@"Example"];
+        if ([localeLanguageCode isEqualToString:@"en"] && [name containsString:@"动画表情"]) {
+            name = [name stringByReplacingOccurrencesOfString:@"动画表情" withString:@"Example"];
         }
         EaseEmoticonGroup *group = [EaseEmoticonGroup getGifGroup];
         for (EaseEmoticonModel *model in group.dataArray) {

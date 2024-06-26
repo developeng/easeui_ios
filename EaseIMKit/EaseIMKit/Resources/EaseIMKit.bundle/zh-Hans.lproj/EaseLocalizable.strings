@@ -37,7 +37,7 @@
 "releaseCancel" = "松手取消";
 "joinChatroom..." = "加入聊天室...";
 "joinChatroomFail" = "加入聊天室失败";
-"[example]" = "[示例%d]";
+"[example]" = "[动画表情%d]";
 "send" = "发送";
 "[emoji]" = "[表情]";
 "playFail" = "播放失败!";

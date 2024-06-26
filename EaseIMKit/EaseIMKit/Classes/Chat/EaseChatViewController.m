@@ -248,9 +248,17 @@
     //更多
     __weak typeof(self) weakself = self;
     EaseExtMenuModel *photoAlbumExtModel = [[EaseExtMenuModel alloc]initWithData:[UIImage easeUIImageNamed:@"photo-album"] funcDesc:EaseLocalizableString(@"photo", nil) handle:^(NSString * _Nonnull itemDesc, BOOL isExecuted) {
+        if (weakself.delegate && [weakself.delegate respondsToSelector:@selector(eventClick:)]) {
+               [weakself.delegate eventClick:EMChatToolBarPhotoAlbum];
+               return;
+           }
         [weakself chatToolBarComponentIncidentAction:EMChatToolBarPhotoAlbum];
     }];
     EaseExtMenuModel *cameraExtModel = [[EaseExtMenuModel alloc]initWithData:[UIImage easeUIImageNamed:@"camera"] funcDesc:EaseLocalizableString(@"camera", nil) handle:^(NSString * _Nonnull itemDesc, BOOL isExecuted) {
+        if (weakself.delegate && [weakself.delegate respondsToSelector:@selector(eventClick:)]) {
+            [weakself.delegate eventClick:EMChatToolBarCamera];
+            return;
+        }
         [weakself chatToolBarComponentIncidentAction:EMChatToolBarCamera];
     }];
     EaseExtMenuModel *locationExtModel = [[EaseExtMenuModel alloc]initWithData:[UIImage easeUIImageNamed:@"location"] funcDesc:EaseLocalizableString(@"location", nil) handle:^(NSString * _Nonnull itemDesc, BOOL isExecuted) {

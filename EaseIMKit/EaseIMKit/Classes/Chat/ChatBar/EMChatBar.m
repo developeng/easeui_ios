@@ -11,7 +11,7 @@
 #import "UIColor+EaseUI.h"
 #import "EMChatMessage+EaseUIExt.h"
 
-#define kTextViewMinHeight 32
+#define kTextViewMinHeight 44
 #define kTextViewMaxHeight 80
 #define kIconwidth 22
 #define kModuleMargin 10
@@ -106,7 +106,7 @@
     [_audioButton addTarget:self action:@selector(audioButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.audioButton];
     [_audioButton Ease_makeConstraints:^(EaseConstraintMaker *make) {
-        make.top.equalTo(_quoteView.ease_bottom).offset(10);
+        make.top.equalTo(_quoteView.ease_bottom).offset(15);
         make.left.equalTo(self).offset(16);
         make.width.Ease_equalTo(@16);
         make.height.Ease_equalTo(kIconwidth);
@@ -118,7 +118,7 @@
     [_conversationToolBarBtn addTarget:self action:@selector(moreButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_conversationToolBarBtn];
     [_conversationToolBarBtn Ease_makeConstraints:^(EaseConstraintMaker *make) {
-        make.top.equalTo(_quoteView.ease_bottom).offset(10);
+        make.top.equalTo(_quoteView.ease_bottom).offset(15);
         make.right.equalTo(self).offset(-16);
         make.width.height.Ease_equalTo(kIconwidth);
     }];
@@ -129,7 +129,7 @@
     [_emojiButton addTarget:self action:@selector(emoticonButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_emojiButton];
     [_emojiButton Ease_makeConstraints:^(EaseConstraintMaker *make) {
-        make.top.equalTo(_quoteView.ease_bottom).offset(10);
+        make.top.equalTo(_quoteView.ease_bottom).offset(15);
         make.right.equalTo(self.conversationToolBarBtn.ease_left).offset(-kModuleMargin);
         make.width.height.Ease_equalTo(kIconwidth);
     }];
